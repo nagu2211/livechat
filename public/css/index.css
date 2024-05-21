@@ -1,0 +1,29 @@
+
+.appClass{
+    position: relative;
+    height: 100vh;
+}
+
+#app{
+    display: grid;
+    grid-template-areas: 
+    "sidebar aside main main"
+    ;
+    grid-template-columns: 1fr 7fr 12fr;
+}
+
+.sidebar {
+    background-color: beige;
+    grid-area: sidebar;
+    flex-direction: column;
+    display: flex;
+    overflow-y: auto;
+}
+.aside {
+    grid-area: aside;
+    background-color: aqua;
+}
+.main{
+    grid-area: main;
+    background-color: aquamarine;
+}
