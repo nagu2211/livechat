@@ -9,7 +9,7 @@
     grid-template-areas: 
     "sidebar aside main main"
     ;
-    grid-template-columns: 1fr 7fr 12fr;
+    grid-template-columns: 1fr 8fr 11fr;
 }
 
 .sidebar {
