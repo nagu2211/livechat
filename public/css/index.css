@@ -16,13 +16,11 @@
 
 #app {
   display: grid;
-  grid-template-areas:
-    'sidebar aside main main'
-    'sidebar aside main main';
+  grid-template-areas: 'sidebar aside main main';
   grid-template-columns: 1fr 8fr 11fr;
-  grid-template-rows: 40px 1fr;
+  
 }
-
+/* navbar sidebar */
 .sidebar {
   border-right-style: solid;
   border-right-color: rgba(134, 150, 160, 0.15);
@@ -44,6 +42,7 @@
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
 }
 nav ul li {
+  cursor: pointer;
   position: relative;
   color: #aebac1;
   font-size: 14px;
@@ -58,7 +57,7 @@ nav ul li:hover {
   position: relative;
   width: 39px;
   height: 40px;
-  top: 14px;
+  top: 10px;
   font-size: 20px;
   text-align: center;
 }
