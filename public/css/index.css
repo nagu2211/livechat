@@ -1,29 +1,119 @@
-
-.appClass{
-    position: relative;
-    height: 100vh;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+.appClass {
+  position: relative;
+  height: 100vh;
 }
 
-#app{
-    display: grid;
-    grid-template-areas: 
-    "sidebar aside main main"
-    ;
-    grid-template-columns: 1fr 8fr 11fr;
+#app {
+  display: grid;
+  grid-template-areas:
+    'sidebar aside main main'
+    'sidebar aside main main';
+  grid-template-columns: 1fr 8fr 11fr;
+  grid-template-rows: 40px 1fr;
 }
 
 .sidebar {
-    background-color: beige;
-    grid-area: sidebar;
-    flex-direction: column;
-    display: flex;
-    overflow-y: auto;
+  border-right-style: solid;
+  border-right-color: rgba(134, 150, 160, 0.15);
+  background-color: #314049;
+  grid-area: sidebar;
+  flex-direction: column;
+  display: flex;
+  overflow-y: auto;
+}
+.sidebar nav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  width: 59px;
+  overflow: hidden;
+  transition: width 0.2s linear;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+nav ul li {
+  position: relative;
+  color: #aebac1;
+  font-size: 14px;
+  display: table;
+  padding: 10px;
+  transition: all 0.2s;
+}
+nav ul li:hover {
+  background: #eee;
+}
+.fas {
+  position: relative;
+  width: 39px;
+  height: 40px;
+  top: 14px;
+  font-size: 20px;
+  text-align: center;
+}
+nav ul li .nav-item {
+  position: relative;
+  top: 12px;
+  margin-left: 10px;
+}
+nav ul .logout {
+  position: absolute;
+  bottom: 0;
+}
+/* tooltip */
+.tooltip {
+  color: #314049;
+  background-color: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.3em 0.6em;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  border-radius: 50px;
+}
+
+.tooltip::before {
+  background-color: #ffffff;
+  position: absolute;
+  content: '';
+  height: 0.6em;
+  width: 0.6em;
+  bottom: -0.2em;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+}
+
+li:hover .tooltip {
+  top: -50%;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+li:hover .tooltipdwn {
+  top: 120%;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 .aside {
-    grid-area: aside;
-    background-color: aqua;
+  grid-area: aside;
+  background-color: #f2f2f2;
 }
-.main{
-    grid-area: main;
-    background-color: aquamarine;
+.main {
+  grid-area: main;
+  background-color: #ffffff;
 }

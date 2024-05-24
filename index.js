@@ -9,7 +9,7 @@ app.use((express.static(path.join(__dirname,"public"))))
 app.set("port", process.env.PORT || 3000)
 
 const server = app.listen(app.get("port"),()=>{
-    console.log("server port: ", app.get("port"));
+    console.log("http://localhost:" + app.get("port"));
 })
 
 const io = SocketIO(server)
