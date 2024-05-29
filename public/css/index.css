@@ -122,7 +122,7 @@ li:hover .tooltipdwn {
   height: 50px;
   color: #8e8e8e;
 }
-.me-barchat{
+.me-barchat {
   cursor: pointer;
   padding: 10px 20px 10px 20px;
   width: 100%;
@@ -142,12 +142,12 @@ li:hover .tooltipdwn {
   object-fit: cover;
   border-radius: 2px;
 }
-.me-info-chat{
+.me-info-chat {
   display: flex;
   flex-direction: column;
 }
-.me-name{
-  font-weight:500;
+.me-name {
+  font-weight: 500;
   padding-top: 15px;
 }
 
@@ -156,7 +156,16 @@ li:hover .tooltipdwn {
   font-size: 16px;
   padding-top: 5px;
 }
-.barchat{
+.sub-title-aside {
+  font-size: 17px;
+  font-weight: 600;
+  padding: 20px;
+}
+.container-barchat {
+  overflow-y: auto;
+  max-height: 75vh;
+}
+.barchat {
   cursor: pointer;
   padding: 10px 20px 10px 20px;
   width: 100%;
@@ -166,9 +175,9 @@ li:hover .tooltipdwn {
 .barchat:hover {
   background-color: #e5e5e5;
 }
-.profile-img-chat{
-  height: 60px;
-  width: 80px;
+.profile-img-chat {
+  height: 35px;
+  width: 50px;
   padding-right: 15px;
 }
 .profile-img-chat img {
@@ -177,13 +186,14 @@ li:hover .tooltipdwn {
   object-fit: cover;
   border-radius: 2px;
 }
-.info-chat{
+.info-chat {
+  width: 345px;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 }
-.info-chat .name-chat{
-  font-weight:bold;
+.info-chat .name-chat {
+  font-weight: bold;
   font-size: 17px;
 }
 
@@ -192,7 +202,28 @@ li:hover .tooltipdwn {
   font-size: 17px;
   font-weight: 500;
 }
-
+.noti-aside {
+  margin-top: 5px;
+  color: white;
+  background-color: #00a2ff;
+  padding-top: 2px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 50%;
+  width: 20px;
+  height: 22px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.pin-aside {
+  margin-top: 5px;
+  color: rgb(132, 132, 132);
+  padding-top: 2px;
+  text-align: center;
+  font-size: 16px;
+  width: 20px;
+  height: 22px;
+}
 
 /* buttons msgs reads */
 .btn {
@@ -203,26 +234,26 @@ li:hover .tooltipdwn {
   padding: 1em 2.5em;
   display: inline-block;
   border-radius: 6em;
-  transition: all .2s;
+  transition: all 0.2s;
   border: none;
   font-family: inherit;
   font-weight: 500;
   color: black;
   background-color: white;
- }
- 
- .btn:hover {
+}
+
+.btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
- }
- 
- .btn:active {
+}
+
+.btn:active {
   transform: translateY(-1px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
- }
- 
- .btn::after {
-  content: "";
+}
+
+.btn::after {
+  content: '';
   display: inline-block;
   height: 100%;
   width: 100%;
@@ -231,17 +262,17 @@ li:hover .tooltipdwn {
   top: 0;
   left: 0;
   z-index: -1;
-  transition: all .4s;
- }
- 
- .btn::after {
+  transition: all 0.4s;
+}
+
+.btn::after {
   background-color: #fff;
- }
- 
- .btn:hover::after {
+}
+
+.btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
- }
+}
 /* online */
 /* media queries  */
 
