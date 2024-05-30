@@ -163,7 +163,7 @@ li:hover .tooltipdwn {
 }
 .container-barchat {
   overflow-y: auto;
-  max-height: 75vh;
+  max-height: 65vh;
 }
 .barchat {
   cursor: pointer;
@@ -224,55 +224,88 @@ li:hover .tooltipdwn {
   width: 20px;
   height: 22px;
 }
-
-/* buttons msgs reads */
-.btn {
+/* input search */
+.input-search-container {
+  display: flex;
+  line-height: 28px;
+  align-items: center;
   position: relative;
-  font-size: 17px;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1em 2.5em;
-  display: inline-block;
-  border-radius: 6em;
-  transition: all 0.2s;
-  border: none;
-  font-family: inherit;
-  font-weight: 500;
-  color: black;
-  background-color: white;
+  padding: 20px;
 }
 
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.btn::after {
-  content: '';
-  display: inline-block;
-  height: 100%;
+.input-search {
   width: 100%;
-  border-radius: 100px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all 0.4s;
+  height: 40px;
+  line-height: 28px;
+  padding: 0 1rem;
+  padding-left: 2.5rem;
+  border: 2px solid rgba(49, 64, 73, 0.24);
+  border-radius: 8px;
+  outline: none;
+  background-color: #f3f3f4;
+  color: #0d0c22;
+  transition: 0.3s ease;
 }
 
-.btn::after {
+.input-search::placeholder {
+  color: #9e9ea7;
+}
+
+.input-search:focus,
+input-search:hover {
+  outline: none;
+  border-color: rgba(49,64,73, 0.4);
   background-color: #fff;
 }
 
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
+.icon-input-search {
+  position: absolute;
+  left: 2rem;
+  fill: #9e9ea7;
+  width: 1rem;
+  height: 1rem;
 }
+
+/* buttons msgs reads */
+.btn-aside-container {
+  display: flex;
+  padding: 0 0 5px 20px;
+  gap: 7px;
+}
+
+.btn-aside {
+  position: relative;
+  margin: 0;
+  padding: 0.5em 0.7em;
+  outline: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  border: 1px solid #314049;
+  background-color: #314049;
+  border-radius: 10px;
+  color: #aebac1;
+  font-weight: 300;
+  font-size: 18px;
+  font-family: inherit;
+  z-index: 0;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.btn-aside:hover {
+  animation: 0.5s ease-in-out both;
+}
+
+.btn-aside:hover {
+  color: #314049;
+  background-color: #eee;
+  border: 1px solid #314049;
+}
+
 /* online */
 /* media queries  */
 
