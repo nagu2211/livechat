@@ -186,7 +186,7 @@ li:hover .tooltipdwn {
   border-radius: 2px;
 }
 .info-chat {
-  width: 345px;
+  width: 438px;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -511,5 +511,38 @@ input-search:hover {
   color: #333;
   cursor: pointer;
 }
+/* My Profile */
+.me-profile {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+  margin-bottom: 28px;
+}
+.me-profile-user-img {
+  width: 200px;
+  height: 200px;
+}
+.me-profile-user-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+}
+.name-profile {
+  padding: 20px;
+  height: 50px;
+  color: #314049;
+}
+.edit-profile{
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  color: #8e8e8e;
+}
+
 /* online */
 /* media queries  */
